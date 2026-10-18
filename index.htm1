@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YAYING CUT | آرایشگاه مردانه</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #faf9f6;
+    color: #202020;
+    line-height: 1.9;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 22px 15px;
+    text-align: center;
+    border-bottom: 3px solid #c8a75a;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #d9b86c;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #ddd;
+    font-size: 13px;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(145deg, #191919, #353027);
+    color: white;
+}
+
+.hero h1 {
+    color: #e4c477;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: #d4b36a;
+    color: #151515;
+    padding: 12px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+section {
+    padding: 35px 18px;
+    max-width: 750px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 22px;
+    color: #a48339;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 15px #0000000c;
+    border: 1px solid #eee6d3;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 15px;
+    background: #fff;
+}
+
+button {
+    font-family: inherit;
+}
+
+.submit {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.note {
+    background: #fff8e8;
+    border-right: 4px solid #d4b36a;
+    padding: 12px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.gallery-item {
+    background: #eee9dd;
+    border-radius: 10px;
+    padding: 25px 8px;
+    text-align: center;
+    min-height: 100px;
+}
+
+.gallery-item span {
+    font-size: 28px;
+}
+
+footer {
+    background: #151515;
+    color: #ddd;
+    text-align: center;
+    padding: 25px 12px;
+    font-size: 13px;
+}
+
+.gold {
+    color: #d4b36a;
+}
+
+@media (min-width: 600px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">YAYING CUT</div>
+    <p>BARBER SHOP • استایل متفاوت</p>
+</header>
+
+<div class="hero">
+    <h1>کلید اعتمادبه‌نفست پیش منه</h1>
+    <p>استایل تو، امضای توئه.</p>
+    <a href="#booking" class="button">رزرو نوبت آنلاین</a>
+</div>
+
+<section>
+    <div class="card" style="text-align:center">
+        <h2>به YAYING CUT خوش آمدی</h2>
+        <p>
+            اینجا قراره استایل خودت رو پیدا کنی.
+            برای انتخاب ساعت دلخواهت درخواست نوبت ثبت کن.
+            بعد از بررسی، نوبتت توسط آرایشگر تأیید می‌شه.
+        </p>
+    </div>
+</section>
+
+<section id="booking">
+    <h2>رزرو نوبت</h2>
+
+    <div class="card">
+        <form id="bookingForm">
+
+            <label for="name">نام و نام خانوادگی</label>
+            <input id="name" name="name" required
+                   placeholder="نام خودت رو بنویس">
+
+            <label for="phone">شماره تماس</label>
+            <input id="phone" name="phone" type="tel"
+                   required placeholder="شماره موبایل">
+
+            <label for="date">تاریخ نوبت</label>
+            <input id="date" name="date" type="date" required>
+
+            <label for="time">ساعت موردنظر</label>
+            <select id="time" name="time" required>
+                <option value="">انتخاب ساعت</option>
+            </select>
+
+            <label for="service">نوع خدمات</label>
+            <select id="service" name="service" required>
+                <option value="">انتخاب خدمات</option>
+                <option>اصلاح مو</option>
+                <option>اصلاح ریش</option>
+                <option>مو و ریش</option>
+                <option>سایر خدمات</option>
+            </select>
+
+            <label for="message">توضیحات (اختیاری)</label>
+            <textarea id="message" name="message" rows="3"
+                      placeholder="اگر توضیحی داری بنویس"></textarea>
+
+            <button type="submit" class="button submit">
+                ثبت درخواست نوبت
+            </button>
+
+            <div class="note">
+                توجه: ثبت فرم به معنی درخواست نوبت است؛
+                نوبت پس از تأیید آرایشگر قطعی خواهد شد.
+            </div>
+
+            <p id="result" style="margin-top:15px;text-align:center"></p>
+
+        </form>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>نمونه‌کارها</h2>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <span>✂️</span>
+            <p>مدل مو</p>
+        </div>
+
+        <div class="gallery-item">
+            <span>💈</span>
+            <p>استایل مردانه</p>
+        </div>
+
+        <div class="gallery-item">
+            <span>🪒</span>
+            <p>اصلاح ریش</p>
+        </div>
+
+        <div class="gallery-item">
+            <span>✨</span>
+            <p>استایل اختصاصی</p>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <h2>محصولات</h2>
+
+    <div class="card" style="text-align:center">
+        <p>به‌زودی محصولات و وسایل مراقبت مو در این قسمت معرفی می‌شن.</p>
+        <p class="gold">YAYING CUT</p>
+    </div>
+</section>
+
+<footer>
+    <p class="gold">YAYING CUT</p>
+    <p>کلید اعتمادبه‌نفست پیش منه</p>
+    <p>با عشق به استایل و زیبایی</p>
+</footer>
+
+<script>
+const timeSelect = document.getElementById("time");
+const dateInput = document.getElementById("date");
+
+function getToday() {
+    const now = new Date();
+    const offset = now.getTimezoneOffset();
+    return new Date(now.getTime() - offset * 60000)
+        .toISOString().split("T")[0];
+}
+
+dateInput.min = getToday();
+
+for (let hour = 12; hour <= 23; hour++) {
+    for (let minute of [0, 30]) {
+        if (hour === 23 && minute === 30) continue;
+
+        const option = document.createElement("option");
+        const h = String(hour).padStart(2, "0");
+        const m = String(minute).padStart(2, "0");
+        option.value = `${h}:${m}`;
+
+        const displayHour = hour > 12 ? hour - 12 : hour;
+        const period = hour >= 12 ? "عصر و شب" : "ظهر";
+
+        option.textContent =
+            `${displayHour}:${m} (${period})`;
+
+        timeSelect.appendChild(option);
+    }
+}
+
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("result").textContent =
+        "فرم آماده است؛ برای فعال شدن رزرو واقعی باید سیستم ثبت و تأیید آنلاین متصل شود.";
+});
+</script>
+
+</body>
+</html>
